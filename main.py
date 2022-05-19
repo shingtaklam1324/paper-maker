@@ -64,7 +64,7 @@ class Config:
 min_year=2015
 max_year=2019
 
-# In the following configs, we use Analysis II on papers 1 and 3, Met & Top on papers 2 and 4
+# In the following configs, we use Analysis II on papers 1 and 4, Met & Top on papers 2 and 3
 paper1 = Config([
     Course("Linear Algebra", 1, 1, min_year, max_year),
     Course("Analysis II", 0, 1, min_year, max_year),
@@ -75,9 +75,46 @@ paper1 = Config([
     Course("Statistics", 1, 1, min_year, max_year),
     Course("Groups, Rings and Modules", 0, 1, min_year, max_year),
     Course("Variational Principles", 1, 0, min_year, max_year)
-], "out.md")
+], "out1.md")
 
-paper1.build()
+paper2 = Config([
+    Course("Linear Algebra", 0, 1, min_year, max_year),
+    Course("Metric and Topological Spaces", 1, 1, min_year, max_year),
+    Course("Markov Chains", 0, 1, min_year, max_year),
+    Course("Complex Analysis or Complex Methods", 0, 1, min_year, max_year),
+    Course("Numerical Analysis", 0, 1, min_year, max_year),
+    Course("Geometry", 0, 1, min_year, max_year),
+    Course("Statistics", 1, 0, min_year, max_year),
+    Course("Groups, Rings and Modules", 1, 1, min_year, max_year),
+    Course("Variational Principles", 0, 1, min_year, max_year)
+], "out2.md")
+
+paper3 = Config([
+    Course("Linear Algebra", 0, 1, min_year, max_year),
+    Course("Metric and Topological Spaces", 0, 1, min_year, max_year),
+    Course("Markov Chains", 1, 0, min_year, max_year),
+    Course("Complex Analysis", 0, 1, min_year, max_year),
+    Course("Numerical Analysis", 0, 1, min_year, max_year),
+    Course("Geometry", 1, 1, min_year, max_year),
+    Course("Statistics", 0, 1, min_year, max_year),
+    Course("Groups, Rings and Modules", 1, 1, min_year, max_year),
+    Course("Variational Principles", 1, 0, min_year, max_year)
+], "out3.md")
+
+paper4 = Config([
+    Course("Linear Algebra", 1, 1, min_year, max_year),
+    Course("Analysis II", 1, 1, min_year, max_year),
+    Course("Markov Chains", 1, 0, min_year, max_year),
+    Course("Complex Analysis", 1, 0, min_year, max_year),
+    Course("Numerical Analysis", 1, 0, min_year, max_year),
+    Course("Geometry", 0, 1, min_year, max_year),
+    Course("Statistics", 0, 1, min_year, max_year),
+    Course("Groups, Rings and Modules", 0, 1, min_year, max_year),
+    Course("Variational Principles", 0, 1, min_year, max_year)
+], "out4.md")
+
+for p in [paper1, paper2, paper3, paper4]:
+    p.build()
 # c = Config([Course(name="Linear Algebra", num_short=1, num_long=1, min_year=2015, max_year=2017)], out_path="out.md")
 # c.build()
 
