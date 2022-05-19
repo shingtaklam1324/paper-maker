@@ -1,0 +1,3 @@
+[submodule "maths-tripos-questions"]
+	path = maths-tripos-questions
+	url = https://github.com/tripos-education/maths-tripos-questions.git
